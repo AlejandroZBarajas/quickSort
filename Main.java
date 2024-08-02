@@ -7,7 +7,7 @@ public class Main {
 
         qs.generarNumero(listaOG);
         lista = listaOG.clone();
-        qs.ordenarQuickSort(lista, 0, lista.length - 1);
+        qs.OrdenarQuickSort(lista, 0, lista.length - 1);
 
         sumaIzq = qs.sumarParteIzq(lista, 0);
         sumaDer = qs.sumarParteDer(lista, lista.length / 2);

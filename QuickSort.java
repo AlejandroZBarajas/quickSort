@@ -2,7 +2,7 @@ public class QuickSort {
 
     public void generarNumero(int listaOG[]){
         int numero;
-        System.out.println("Lista original");
+        System.out.println("Lista original:");
             for(int i=0; i<listaOG.length;i++){
                 numero = (int) (Math.random() * 50 +1);
                 listaOG[i] = numero;
@@ -39,27 +39,28 @@ public class QuickSort {
             OrdenarQuickSort(lista, inferior, j);
         
         if(i < superior)
-            OrdenarQuickSort(lista, i, superior);            }
-    }
-    
+            OrdenarQuickSort(lista, i, superior);            
+        }    
 
-    public void sumarParteIzq(int lista[], int indice){
+    public int sumarParteIzq(int lista[], int indice){
         int tam = indice;
         int suma = 0;
         if ( tam == 9){
             suma = suma + lista [tam];
         }else{
             suma = lista[tam] + sumarParteIzq(lista, tam+1);
-        }return suma;
+        }
+        return suma;
     }
 
-    public void sumarParteDer(int lista [], int indice){
+    public int sumarParteDer(int lista [], int indice){
         int tam = indice;
         int suma = 0;
 
         if (tam == lista.length-1){
             suma = suma + lista[tam];
         }
+        return suma;
     }
 
 
